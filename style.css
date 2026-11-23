@@ -1,0 +1,212 @@
+h1 {
+    color: red;
+    font-family: avenir, sans-serif;
+    font-size: 20px;
+}
+
+.confirmacao h2 {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    background-color: rgba(141, 204, 141, 0.678);
+    color: rgb(93, 155, 93);
+    font-size: 25px;
+    font-weight: bold;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comprovante {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    
+    font-family: avenir, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.sucesso{
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    
+    font-family: gothic, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(93, 155, 93);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.valor {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: center;
+    
+    font-family: avenir, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(145, 148, 145);
+    text-align: center;
+}
+
+#valorTransferido {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+hr {
+    border: none;
+    background-color: rgb(200, 206, 200);
+    height: 1px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.comportamentoPadrao {
+    width: 500px;
+    height: 280px;
+    padding-left: 5px;
+    padding-top: 0.5px;
+    margin: 0 auto;
+    background-color: rgba(240, 141, 95, 0.199);
+    border-radius: 10px;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.comportamentoPadrao h3 {
+    width: 270px;
+    height: 23px;
+    padding-left: 10px;
+    padding-top: 5px;
+
+    font-family: gothic, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba(240, 42, 8, 0.884);
+    background-color:  rgba(241, 110, 50, 0.308);
+    
+    border-radius: 10px;
+    justify-content: flex-start;
+}
+
+.comportamentoPadrao h2 {
+    width: 500px;
+    height: 30px;
+    padding-left: 10px;
+    margin-top: 1px;
+
+    font-family: gothic, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.comportamentoPadrao p {
+    width: 500px;
+    height: 30px;
+    padding-left: 10px;
+    margin-top: 2px;
+    font-family: gothic, sans-serif;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.comportamentoPadrao h4 {
+    width: 500px;
+    height: 5px;
+    padding-left: 10px;
+    margin-top: 2px;
+    font-family: gothic, sans-serif;
+    font-size: 14px;
+    color: rgb(255, 1, 1);
+}
+
+/* .comportamentoPadrao button  {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: rgba(240, 141, 95, 0.377);
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-color: rgba(240, 141, 95, 0.377);
+    
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#aceitar {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: white;
+    background-color: rgb(255, 1, 1);
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-color: rgba(240, 141, 95, 0.377);
+    
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#recusar {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color:rgb(69, 71, 69);
+    background-color: rgba(240, 141, 95, 0.096);
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-color:rgb(69, 71, 69);
+    border-style: solid;
+    border-width: 1px;
+    
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#saibamais {
+    color: #ff0000;    
+    font-family: sans-serif;
+}
+
+.saiba-mais h2 {
+
+    color: #ff0000;
+    font-size: 30px;
+    font-family: gothic, sans-serif;
+}

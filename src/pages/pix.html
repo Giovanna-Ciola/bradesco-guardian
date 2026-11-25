@@ -186,6 +186,60 @@
     </section>
 
 </main>
+
+    <div class="modal" id="pix-modal" hidden>
+        <div class="modal-box" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="Fechar">×</button>
+
+            <form id="step-form" class="modal-step" hidden>
+                <h2 id="form-title">Transferir com chave Pix</h2>
+
+                <label class="modal-field">
+                    <span>Chave Pix ou código</span>
+                    <input type="text" id="pix-chave" required>
+                </label>
+
+                <label class="modal-field">
+                    <span>Valor em R$</span>
+                    <input type="number" id="pix-valor" min="0.01" step="0.01" required>
+                </label>
+
+                <label class="modal-field">
+                    <span>Descrição (opcional)</span>
+                    <input type="text" id="pix-desc">
+                </label>
+
+                <button type="submit" class="btn-normal">Continuar</button>
+            </form>
+
+            <div id="step-review" class="modal-step" hidden>
+                <h2>Revise o Pix</h2>
+
+                <dl class="review-list">
+                    <dt>Para</dt>
+                    <dd id="review-nome"></dd>
+                    <dt>Chave</dt>
+                    <dd id="review-chave"></dd>
+                    <dt>Valor</dt>
+                    <dd id="review-valor"></dd>
+                    <dt>Descrição</dt>
+                    <dd id="review-desc"></dd>
+                </dl>
+
+                <div id="guardian-alert" class="guardian-alert"></div>
+
+                <button type="button" class="btn-normal" id="btn-confirmar">Confirmar Pix</button>
+                <button type="button" class="btn-warning" id="btn-voltar">Voltar e editar</button>
+            </div>
+
+            <div id="step-done" class="modal-step" hidden>
+                <h2 id="done-title"></h2>
+                <p id="done-text" class="done-text"></p>
+                <button type="button" class="btn-normal" id="btn-fechar">Fechar</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="title-footer">
             <h2>bradesco</h2>

@@ -7,13 +7,26 @@ document.querySelector('#today-data').textContent = (diaSemana + ', ' + data).to
 
 // ========== MOSTRAR / ESCONDER SALDO ==========
 let seeBalance = false;
-function changeBalance() {
-    seeBalance = !seeBalance;
+let saldo = 3482.15;
+
+function formatarBRL(valor) {
+    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+function atualizarSaldo() {
     const valor = document.querySelector('#balance-amount');
+    if (!valor) {
+        return;
+    }
     if (seeBalance) {
-        valor.textContent = 'R$ 3.482,15';
+        valor.textContent = formatarBRL(saldo);
     } else {
         valor.textContent = 'R$ ••••••';
     }
+}
+
+function changeBalance() {
+    seeBalance = !seeBalance;
+    atualizarSaldo();
 }
 

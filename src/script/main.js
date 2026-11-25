@@ -1,6 +1,6 @@
 // ========== DATA DE HOJE ==========
 const today = new Date();
-const diaSemana =today.toLocaleDateString('pt-BR', { weekday: 'long' });
+const diaSemana = today.toLocaleDateString('pt-BR', { weekday: 'long' });
 const data = today.toLocaleDateString('pt-BR');
 document.querySelector('#today-data').textContent = (diaSemana + ', ' + data).toUpperCase();
 
@@ -16,3 +16,4 @@ function changeBalance() {
         valor.textContent = 'R$ ••••••';
     }
 }
+

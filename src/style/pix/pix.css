@@ -332,7 +332,6 @@
 
     
 }
-  /* CARDS PIX */
 
 .pix-card {
     background: #ffffff;
@@ -341,7 +340,6 @@
     transition: all 0.2s ease;
 }
 
-/* HOVER DOS CARDS BRANCOS */
 
 .pix-card:not(.active):hover {
     background: #d6d6d6;

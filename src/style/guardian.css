@@ -1,0 +1,118 @@
+/* coloca tudo dentro de uma seção para poder organizar os itens na posição desejada */
+.conteudo {
+    background-color: #f9f9f9;
+    padding: 10px;
+    display:flex;
+    gap: 20px;
+}
+
+.pix-bloqueado {
+    color: black;
+    background-color:beige;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.painel-lateral {
+    background-color:beige;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    justify-content: flex-end;
+    align-items: column;
+
+}
+
+.area-alerta {
+    background-color: #f5b1b181;
+    padding: 10px;
+    display:flex;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+/* circulo de pause no alerta */
+.area-alerta h2 {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; /*ciruculo*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ee1c1c;
+    line-height: 50px; /*pra centralizar põe o mesmo valor da altura e largura */
+    color: white;
+    margin: 0 auto; /* centraliza horizontalmente */  
+}
+
+.area-alerta h3 {
+    height: auto;
+    width: auto;
+    margin: 0;
+    color: #000000;
+    font-weight: bold;
+}
+
+.area-alerta p {
+    margin: 0;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+}
+
+.porque-pausamos {
+    font-size: 14px;
+    padding-bottom: 50px;
+    text-align:left
+}
+
+.porque-pausamos h1 {
+    font-size: 16px;
+    margin-left:10px;
+    margin-top: 15px;
+}
+
+#guardian-explicacao {
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+.porque-pausamos h2 {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.porque-pausamos p {
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.botao-atendente {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    flex-direction: column;
+}
+
+.confirmar {
+    border-radius: 30px;
+    border:2px solid;
+    border-color: #ee1c1c;
+    padding: 10px;
+    background-color: #ee1c1c;
+    color: #ccc;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.bloquear {
+    border-radius: 30px;
+    border:2px solid;
+    border-color: #ee1c1c;
+    padding: 10px;
+    color:#ee1c1c;
+    font-weight: 700;
+}

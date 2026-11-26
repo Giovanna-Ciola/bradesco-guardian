@@ -7,6 +7,7 @@
     <title>Bradesco | Guardian</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/guardian.css">
 </head>
 
 <body>
@@ -56,6 +57,92 @@
             <a href="">Mais opções ▾</a>
         </nav>
     </header>
+    
+    <!-- conteúdo principal da página -->
+    <main>
+
+        <div class="conteudo"> 
+
+            <!-- seção de aleta de segurança,explicando o porque o pix foi bloqueado -->
+            <section class="pix-bloqueado">
+
+                <!-- alerta de que o pix foi bloqueado por entrar nos padrões de transação suspeita do guardian -->
+                <section class="area-alerta">
+                    <div class="alerta">
+                        <h2>⏸</h2>
+                        <h3>Alerta de segurança</h3>
+                        <p>Pausamos esse pix pois ele foge do seu padrão.<strong>O dinheiro não saiu da sua conta</strong></p>
+                    </div>
+                </section>
+
+                <div class="porque-pausamos">
+                    <h1>Por que pausamos esse pix?</h1>
+                    <p id="guardian-explicacao">O Guardian é um sistema de segurança do Bradesco que analisa o seu padrão de transações e bloqueia aquelas que fogem do seu comportamento habitual. Isso ajuda a proteger você contra fraudes e transações suspeitas.</p>
+                    <h2>Valor</h2>
+                    <p>R$ 15.000,00 <strong>fora do padrão - elevado</strong>(seu padrão é de até R$ 1.100,00)</p>
+                    <h2>Localização</h2>
+                    <p>Acesso de Bahia. <strong>fora do padrão - médio</strong>(seu padrão é região SP - São Paulo)</p>
+                    <h2>Horário</h2>
+                    <p>Horário de acesso 23:00. <strong>fora do padrão - elevado</strong>(seu padrão é entre 08:00 e 19:00)</p>
+                    <h2>destinatário</h2>
+                    <p>você nunca fez umma transação para este número <strong>fora do padrão - elevado</strong></p>
+                </div>
+
+                <div class="botao-atendente">
+                    <button type="button" class="confirmar">Fui eu, confirmar com um atendente</button>
+                    <button type="button" class="bloquear">Não fui eu, bloquear pix</button>
+                </div>
+
+
+            </section>
+
+
+            <!-- seção lateral com resumo do pix bloqueado, e no que o guardian agiu -->
+            <section>
+
+                <aside  class="painel-lateral">
+                    <!-- seção de resumo do pix que foi bloqueado -->
+                    <section>
+                        <h1>resumo do pix</h1>
+                        <p>para</p>
+                        <h2>Casa de eletrônicos</h2>
+                        <hr>
+                        <p>chave</p>
+                        <h2>0090090087</h2>
+                        <hr>
+                        <p>valor</p>
+                        <h2>R$ 15.000,00</h2>
+                        <hr>
+                        <p>horário</p>
+                        <h2>agora</h2>
+                    </section>
+
+                    <!-- seção da explicação da ação do guardian em cima desse pix -->
+                    <section>
+                        <h1>Guardian nessa transação</h1>
+                        <hr>
+                        <h2>Valores</h2>
+                        <p>R$ 15.000,00(seu padrão é de até R$ 1.100,00)</p>
+                        <hr>
+                        <h2>Localização</h2>
+                        <p>Acesso de Bahia. (seu padrão é região SP - São Paulo)</p>
+                        <hr>
+                        <h2>Horário</h2>
+                        <p>Horário de acesso 23:00. (seu padrão é entre 08:00 e 19:00)</p>
+                        <hr>
+                        <h2>Frequência</h2>
+                        <p>2º Pix de hoje (seu padrão é de 3 por dia)</p>
+                        <h2>Favorecido</h2>
+                        <p>primeira vez enviando para essa chave</p>
+                        <!-- link não funcional apenas para demonstrar que o usuario pode configurar o guardian -->
+                        <a href="configurar" class="link-naofuncional">Configurar itens de validação</a>
+                    </section>
+                </aside>
+
+            </section>     
+
+        </div>    
+    </main>
 
     <footer>
         <div class="title">

@@ -7,6 +7,7 @@
     <title>Bradesco | Guardian</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/pix.css">
 </head>
 
 <body>
@@ -57,13 +58,233 @@
         </nav>
     </header>
 
+    <main class="pix-container">
+
+    <section class="pix-header">
+        <div>
+            <h1>Área Pix</h1>
+            <p>Todo Pix é protegido pelo Guardian</p>
+        </div>
+
+        <span class="guardian-status">
+            🛡 Guardian ativo
+        </span>
+    </section>
+
+    <section class="pix-options">
+
+        <button type="button" data-acao="transferir" class="pix-card active">
+            
+            <h3>Transferir</h3>
+            <p>com chave Pix</p>
+        </button>
+
+        <button type="button" data-acao="copia-cola" class="pix-card">
+            
+            <h3>Pix Copia e Cola</h3>
+            <p>colar código</p>
+        </button>
+
+        <button type="button" data-acao="qrcode" class="pix-card">
+          
+            <h3>Ler QR Code</h3>
+            <p>pagar com câmera</p>
+        </button>
+
+        <button type="button" data-acao="cobrar" class="pix-card">
+            
+            <h3>Cobrar</h3>
+            <p>gerar QR Code</p>
+        </button>
+
+        <button type="button" data-acao="chaves" class="pix-card">
+          
+            <h3>Minhas chaves</h3>
+            <p>3 chaves cadastradas</p>
+        </button>
+
+        <button type="button" data-acao="limites" class="pix-card">
+            
+            <h3>Limites Pix</h3>
+            <p>diurno e noturno</p>
+        </button>
+
+    </section>
+
+    <section class="pix-content">
+
+        <div class="contacts-section">
+
+            <h2>Contatos recentes</h2>
+
+            <div class="contacts-list">
+
+                <article class="contact">
+                    <div class="contact-avatar">MB</div>
+
+                    <div class="contact-info">
+                        <h3>Mercado Bom Preço LTDA</h3>
+                        <p>E-mail: mercado@bompreco.com.br · Banco Exemplo S.A.</p>
+                    </div>
+
+                    <button type="button" class="contact-pix">
+                        Pix →
+                    </button>
+                </article>
+
+                <article class="contact">
+                    <div class="contact-avatar">MS</div>
+
+                    <div class="contact-info">
+                        <h3>Maria Silva</h3>
+                        <p>E-mail: maria.s@email.com · Banco Digital Fictício</p>
+                    </div>
+
+                    <button type="button" class="contact-pix">
+                        Pix →
+                    </button>
+                </article>
+
+                <article class="contact">
+                    <div class="contact-avatar">JP</div>
+
+                    <div class="contact-info">
+                        <h3>João Pereira</h3>
+                        <p>Celular: 11988887777 · Cooperativa Modelo</p>
+                    </div>
+
+                    <button type="button" class="contact-pix">
+                        Pix →
+                    </button>
+                </article>
+
+            </div>
+        </div>
+
+        <aside class="presentation-section">
+
+            <h2>Para a apresentação</h2>
+
+            <div class="presentation-card">
+
+                <p>
+                    Preenche um Pix completo e vai direto para a revisão.
+                </p>
+
+                <button type="button" class="btn-normal">
+                    Simular Pix dentro do padrão
+                </button>
+
+                <button type="button" class="btn-warning">
+                    Simular golpe (fora do padrão)
+                </button>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+    <div class="modal" id="pix-modal" hidden>
+        <div class="modal-box" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" aria-label="Fechar">×</button>
+
+            <form id="step-form" class="modal-step" hidden>
+                <h2 id="form-title">Transferir com chave Pix</h2>
+
+                <label class="modal-field">
+                    <span>Chave Pix ou código</span>
+                    <input type="text" id="pix-chave" required>
+                </label>
+
+                <label class="modal-field">
+                    <span>Valor em R$</span>
+                    <input type="number" id="pix-valor" min="0.01" step="0.01" required>
+                </label>
+
+                <label class="modal-field">
+                    <span>Descrição (opcional)</span>
+                    <input type="text" id="pix-desc">
+                </label>
+
+                <button type="submit" class="btn-normal">Continuar</button>
+            </form>
+
+            <div id="step-review" class="modal-step" hidden>
+                <h2>Revise o Pix</h2>
+
+                <dl class="review-list">
+                    <dt>Para</dt>
+                    <dd id="review-nome"></dd>
+                    <dt>Chave</dt>
+                    <dd id="review-chave"></dd>
+                    <dt>Valor</dt>
+                    <dd id="review-valor"></dd>
+                    <dt>Descrição</dt>
+                    <dd id="review-desc"></dd>
+                </dl>
+
+                <div id="guardian-alert" class="guardian-alert"></div>
+
+                <button type="button" class="btn-normal" id="btn-confirmar">Confirmar Pix</button>
+                <button type="button" class="btn-warning" id="btn-voltar">Voltar e editar</button>
+            </div>
+
+            <div id="step-done" class="modal-step" hidden>
+                <h2 id="done-title"></h2>
+                <p id="done-text" class="done-text"></p>
+                <button type="button" class="btn-normal" id="btn-fechar">Fechar</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <div class="title">
-            <h1>bradesco</h1>
+        <div class="title-footer">
+            <h2>bradesco</h2>
+            <h4>Fone Fácil</h4>
+            <div class="columns">
+                <div class="first-column">
+                    <p>Capitais e regiões metropolitanas</p>
+                    <h4>4002 0022</h4>
+                    <p>Consulta de saldo, extrato, transações financeiras e cartão de crédito.</p>
+                </div>
+                <div class="second-column">
+                    <p>Demais regiões</p>
+                    <h4>0800 570 0022</h4>
+                    <p>SAC - Deficiência Auditiva ou de Fala</p>
+                    <h4>0800 722 0099</h4>
+                </div>
+                <div class="third-column">
+                    <p>SAC - Alô Bradesco</p>
+                    <h4>0800 704 8383</h4>
+                    <p>Cancelamento, reclamação, informação, sugestão e elogio.</p>
+                </div>
+                <div class="card-column">
+                    <h4>Segurança</h4>
+                    <p>O desenho do cadeado deve aparecer na barra do seu navegador.</p>
+                    <a href="#">Ver mais</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <p>Se preferir, fale com a BIA pelo WhatsApp: 11 3335 0237</p>
+                <a href="#">Aviso de Privacidade</a>
+            </div>
+        </div>
+
+        <div class="fourth-column">
+            <a href="#">Ver outros telefones &gt;</a>
         </div>
     </footer>
 
     <script src="../script/main.js"></script>
+    <script src="../script/pix.js"></script>
+
+
+
+
 </body>
 
 </html>

@@ -1,12 +1,12 @@
 /* coloca tudo dentro de uma seção para poder organizar os itens na posição desejada */
 .conteudo {
-    background-color: #f9f9f9;
-    padding: 10px;
     display:flex;
     gap: 20px;
 }
 
 .pix-bloqueado {
+    width: 600px;
+    height: auto;
     color: black;
     background-color:beige;
     border-radius: 10px;
@@ -15,16 +15,17 @@
 }
 
 .painel-lateral {
-    background-color:beige;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    justify-content: flex-end;
-    align-items: column;
-
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-shrink: 0;
 }
 
+
 .area-alerta {
+    height: auto;
+    width: auto;
     background-color: #f5b1b181;
     padding: 10px;
     display:flex;
@@ -32,6 +33,13 @@
     border-radius: 10px;
     padding: 25px;
     text-align: center;
+}
+
+.area-alerta div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 /* circulo de pause no alerta */
@@ -59,8 +67,11 @@
 .area-alerta p {
     margin: 0;
     color: #000000;
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
+    line-height: 1.5;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .porque-pausamos {
@@ -115,4 +126,78 @@
     padding: 10px;
     color:#ee1c1c;
     font-weight: 700;
+}
+
+.resumo-pix {
+    width: 320px;
+    height: auto;
+    background-color:beige;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+.resumo-pix h1 {
+    font-size: 16px;
+}
+
+.linha-resumo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.acao-guardian {
+    width: 320px;
+    height: auto;
+    background-color:beige;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.acao-guardian h1 {
+    font-size: 16px;
+}
+
+#itens-fora-padrao {
+    color:#ee1c1c;
+    margin-left: 0px;
+}
+
+.acao-guardian h2 {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.acao-guardian p {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.titulo-validacao {
+    display: flex;
+    align-items: center;
+}
+
+#foraPadrao {
+    color:#ee1c1c;
+    padding-top: 6px;
+    padding-left: 1px;
+}
+
+#dentroPadrao {
+    color: green;
+    padding-top: 6px;
+    padding-left: 1px;
 }

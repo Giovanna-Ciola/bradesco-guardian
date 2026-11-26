@@ -34,18 +34,17 @@
     text-align: center;
 }
 
-/* circulo de pause no alerta */
 .area-alerta h2 {
     width: 50px; 
     height: 50px; 
-    border-radius: 50%; /*ciruculo*/
+    border-radius: 50%;
     display:flex;
     justify-content: center;
     align-items: center;
     background-color: #ee1c1c;
-    line-height: 50px; /*pra centralizar põe o mesmo valor da altura e largura */
+    line-height: 50px;
     color: white;
-    margin: 0 auto; /* centraliza horizontalmente */  
+    margin: 0 auto; 
 }
 
 .area-alerta h3 {
@@ -115,4 +114,24 @@
     padding: 10px;
     color:#ee1c1c;
     font-weight: 700;
+}
+
+/* ---------- Responsivo ---------- */
+.pix-bloqueado {
+    flex: 2;
+}
+
+.painel-lateral {
+    flex: 1;
+}
+
+@media (max-width: 900px) {
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .painel-lateral h1,
+    .painel-lateral h2 {
+        font-size: 20px;
+    }
 }

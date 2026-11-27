@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="src/style/main.css">
 </head>
 
-<body>
+<body class="home">
     <div class="topbar">
         <div class="title">
             <h1>bradesco</h1>
@@ -30,10 +30,16 @@
                 <span class="available-balance">Saldo disponível ▾</span>
                 <span class="balance-amount" id="balance-amount">R$ ••••••</span>
             </button>
-
             <div class="user">
                 <span>|</span>
+                <span class="avatar">E</span>
                 <span class="name">EMÍLIO</span>
+                <button type="button" class="bell" aria-label="Notificações">
+                    <svg class="icon icon-line" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"></path>
+                        <path d="M10 20a2 2 0 0 0 4 0"></path>
+                    </svg>
+                </button>
                 <button type="button" class="exit">
                     Sair
                     <svg class="icon icon-line" viewBox="0 0 24 24" aria-hidden="true">
@@ -60,8 +66,82 @@
     </header>
 
     <main>
-        <div class="home-grid">
+        <!-- só aparece no celular -->
+        <section class="favorites">
+            <h2 class="section-title">Favoritos</h2>
+            <div class="fav-grid">
+                <a href="#">
+                    <span><svg class="fav-icon" viewBox="0 0 24 24">
+                            <path d="M4 8h14l-3-3M20 16H6l3 3" />
+                        </svg></span>
+                    Transferências
+                </a>
+                <a href="src/pages/pix.html">
+                    <span><svg class="fav-icon" viewBox="0 0 24 24">
+                            <path d="M12 3l4 4-4 4-4-4zM12 13l4 4-4 4-4-4zM3 12l4-4M21 12l-4-4M3 12l4 4M21 12l-4 4" />
+                        </svg></span>
+                    Pix
+                </a>
+                <a href="#">
+                    <span><svg class="fav-icon" viewBox="0 0 24 24">
+                            <path d="M4 6v12M7 6v12M11 6v12M14 6v12M17 6v12M20 6v12" />
+                        </svg></span>
+                    Pagamentos
+                </a>
+                <a href="#">
+                    <span><svg class="fav-icon" viewBox="0 0 24 24">
+                            <rect x="3" y="6" width="18" height="12" rx="2" />
+                            <path d="M3 10h18" />
+                        </svg></span>
+                    Cartões
+                </a>
+                <a href="src/pages/guardian.html" class="fav-guardian">
+                    <span><svg class="fav-icon" viewBox="0 0 24 24">
+                            <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg></span>
+                    Guardian
+                </a>
+                <a href="#">
+                    <span><svg class="fav-icon" viewBox="0 0 24 24">
+                            <path d="M4 18l5-6 4 3 7-8" />
+                        </svg></span>
+                    Investimentos
+                </a>
+                <a href="#">
+                    <span><svg class="fav-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="8" />
+                            <path
+                                d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5" />
+                        </svg></span>
+                    Empréstimos
+                </a>
+                <a href="#" class="fav-edit">
+                    <span><svg class="fav-icon" viewBox="0 0 24 24">
+                            <path d="M4 7h10M18 7h2M4 17h4M12 17h8" />
+                            <circle cx="16" cy="7" r="2" />
+                            <circle cx="10" cy="17" r="2" />
+                        </svg></span>
+                    Personalizar
+                </a>
+            </div>
 
+            <a href="src/pages/guardian.html" class="promo">
+                <span class="promo-img">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z" />
+                        <path d="M9 12l2 2 4-4" />
+                    </svg>
+                </span>
+                <span class="promo-text">
+                    <strong>Seu Pix agora tem o Guardian</strong>
+                    <span>Proteção contra golpes que aprende o seu padrão</span>
+                </span>
+                <span class="promo-arrow">›</span>
+            </a>
+        </section>
+
+        <div class="home-grid">
             <section>
                 <h2 class="section-title">Serviços</h2>
                 <div class="accordion accordion-flush" id="services">
@@ -144,8 +224,32 @@
                     <a href="#">Comprovantes (2ª Via) <span>→</span></a>
                 </div>
             </section>
-
         </div>
+
+        <div class="bottom-grid">
+        <section class="last-cards">
+            <div>
+                <h2>Seguros</h2>
+                <div class="text-cards">
+                    <img src="src/assets/imgs/icone-seguro.png" alt="Seguros" width="80">
+                    <p>Acesse todos os seus bens segurados.</p>
+                    <h3>Ainda não tem?</h3>
+                    <p>Faça um seguro para proteger você e sua família.</p>
+                    <a href="#" class="card-button">Visualizar</a>
+                </div>
+            </div>
+        </section>
+        <section class="last-cards">
+            <div>
+                <h2>Avisos</h2>
+                <div class="text-cards-second">
+                    <h3>Fique Ligado!</h3>
+                    <p>No momento você não tem nenhum aviso, mas o bradesco deixa você sempre atualizado e auxilia a organizar sua conta e seu dia-a-dia.</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
     </main>
 
     <footer>

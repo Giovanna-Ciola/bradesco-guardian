@@ -269,6 +269,92 @@ main {
     color: #CC092F;
 }
 
+/* ---------- Cards ---------- */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    align-items: stretch;
+    margin-top: 40px;
+}
+
+.bottom-grid section {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-cards,
+.text-cards-second {
+    flex: 1;
+}
+
+.last-cards {
+    display: flex;
+    gap: 10px;
+}
+
+.last-cards h2 {
+    font-size: 22px;
+}
+
+.text-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    padding: 40px 32px;
+    color: #3A3539;
+}
+
+.text-cards-second {
+    background: white;
+    border-radius: 10px;
+    padding: 40px 32px;
+    color: #3A3539;
+}
+
+.text-cards img {
+    width: 110px;
+    margin-bottom: 20px;
+}
+
+.text-cards p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.text-cards h3 {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.text-cards-second h3 {
+    font-size: 20px;
+}
+
+.text-cards-second p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.card-button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 12px;
+    border: 1.5px solid #CC092F;
+    border-radius: 24px;
+    color: #CC092F;
+    font-weight: bold;
+    transition: .2s ease;
+}
+
+.card-button:hover {
+    background: #FBE3E8;
+    color: #000000;
+}
+
 /* ---------- Rodapé ---------- */
 footer {
     color: white;
@@ -362,4 +448,274 @@ footer a {
 
 .fourth-column a {
     font-size: 15px;
+}
+
+/* ---------- Responsivo ---------- */
+.title,
+.partner,
+.balance-button,
+.navbar a {
+    white-space: nowrap;
+}
+
+/* tablet */
+@media (max-width: 1100px) {
+    .topbar {
+        flex-wrap: wrap;
+        gap: 14px 24px;
+    }
+
+    .search {
+        order: 3;
+        width: 100%;
+    }
+
+    .navbar {
+        overflow-x: auto;
+    }
+
+    .columns {
+        flex-wrap: wrap;
+    }
+
+    .card-column {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .accordion-body {
+        min-height: auto;
+    }
+}
+
+/* celular */
+@media (max-width: 600px) {
+
+    .topbar,
+    .navbar,
+    main,
+    .title-footer,
+    .fourth-column {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+
+    .title,
+    .data,
+    .user>span:first-child {
+        display: none;
+    }
+
+    .balance {
+        gap: 14px;
+    }
+
+    .accordion-actions {
+        flex-wrap: wrap;
+    }
+
+    .columns,
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .first-column,
+    .second-column,
+    .third-column,
+    .card-column,
+    .footer-links p {
+        width: 100%;
+    }
+
+    .third-column {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+}
+
+.extract,
+.avatar,
+.bell,
+.favorites {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        padding-top: 24px;
+        padding-bottom: 36px;
+        border-radius: 0 0 50% 50% / 0 0 28px 28px;
+    }
+
+    .balance {
+        display: contents;
+    }
+
+    .user {
+        order: 1;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: white;
+        color: #CC092F;
+        font-weight: bold;
+    }
+
+    .name {
+        flex: 1;
+        font-size: 15px;
+    }
+
+    .bell {
+        display: block;
+    }
+
+    .balance-button {
+        order: 2;
+    }
+
+    .extract {
+        display: block;
+        order: 2;
+        margin-left: auto;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .search {
+        order: 3;
+        border-radius: 22px;
+    }
+
+    .home .button-navbar {
+        display: none;
+    }
+
+    .favorites {
+        display: block;
+        margin-bottom: 28px;
+    }
+
+    .fav-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px 8px;
+        margin-bottom: 24px;
+    }
+
+    .fav-grid a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        color: #1F1A1C;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .fav-grid a>span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        background: white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .fav-icon {
+        width: 26px;
+        height: 26px;
+        fill: none;
+        stroke: #CC092F;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .fav-guardian>span {
+        outline: 2px solid #CC092F;
+    }
+
+    .fav-edit {
+        color: #3655D4 !important;
+    }
+
+    .fav-edit .fav-icon {
+        stroke: #3655D4;
+    }
+
+    .promo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        overflow: hidden;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        color: #1F1A1C;
+    }
+
+    .promo-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 100px;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, #CC092F, #7A2C86);
+    }
+
+    .promo-img svg {
+        width: 42px;
+        height: 42px;
+        fill: none;
+        stroke: white;
+        stroke-width: 1.8;
+    }
+
+    .promo-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex: 1;
+    }
+
+    .promo-text strong {
+        font-size: 14px;
+    }
+
+    .promo-text span {
+        font-size: 12px;
+        color: #635A5E;
+    }
+
+    .promo-arrow {
+        padding-right: 14px;
+        font-size: 24px;
+        color: #3655D4;
+    }
 }
